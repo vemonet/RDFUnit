@@ -12,4 +12,4 @@ COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
 RUN mvn -pl rdfunit-validate -am clean install -DskipTests=true
-ENTRYPOINT ["bin/rdfunit"]
+ENTRYPOINT ["/usr/src/myapp/bin/rdfunit"]
